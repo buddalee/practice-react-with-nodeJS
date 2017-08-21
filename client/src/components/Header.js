@@ -28,11 +28,11 @@ class Header extends Component {
         <div className="nav-wrapper">
           <Link
             to={auth ? '/surveys/' : '/'}
-            className="brand-logo"
+            className="left brand-logo"
           >
             Emaily
           </Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <ul className="right">
             {this.renderContent()}
           </ul>
         </div>
