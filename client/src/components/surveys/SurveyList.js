@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
+import Loading from '../Loading';
 
 class SurveyList extends Component {
   componentDidMount() {
@@ -8,7 +9,9 @@ class SurveyList extends Component {
   }
 
   renderSurveys() {
-    return this.props.surveys.reverse().map(survey => {
+    const props = this.props;
+    const { surveys } = props;
+    return surveys.reverse().map(survey => {
       return (
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
@@ -30,16 +33,21 @@ class SurveyList extends Component {
   }
 
   render() {
+    const props = this.props;
+    const { isLoading } = props;
     return (
       <div style={{ padding: '0 10px' }}>
-        {this.renderSurveys()}
+        {isLoading ? <Loading /> : this.renderSurveys()}
       </div>
     );
   }
 }
 
-function mapStateToProps({ surveys }) {
-  return { surveys };
+function mapStateToProps(state) {
+  return {
+    surveys: state.surveys.surveys,
+    isLoading: state.surveys.isLoading,
+  };
 }
 
 export default connect(mapStateToProps, { fetchSurveys })(SurveyList);
