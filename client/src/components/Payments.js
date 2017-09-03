@@ -14,9 +14,7 @@ class Payments extends Component {
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
         currency="TWD"
       >
-        <button className="btn">
           Add Credits
-        </button>
       </StripeCheckout>
     );
   }

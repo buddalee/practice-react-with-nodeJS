@@ -11,10 +11,17 @@
     },
     "/api/*": {
       "target": "http://localhost:5000"
+    },
+    "/socket.io/*": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "classnames": "^2.2.5",
+    "font-awesome": "github:FortAwesome/Font-Awesome",
+    "fontawesome": "^4.7.2",
+    "history": "^4.7.2",
     "humps": "^2.0.1",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
@@ -23,8 +30,12 @@
     "query-string": "^5.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-history": "^0.18.2",
+    "react-intl": "^2.3.0",
     "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.1.2",
+    "react-router-redux": "^4.0.8",
     "react-scripts": "1.0.11",
     "react-stripe-checkout": "^2.6.3",
     "redux": "^3.7.2",
@@ -32,6 +43,7 @@
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^4.3.0",
     "redux-thunk": "^2.2.0",
+    "socket.io-client": "^2.0.3",
     "type-to-reducer": "^1.0.3"
   },
   "scripts": {

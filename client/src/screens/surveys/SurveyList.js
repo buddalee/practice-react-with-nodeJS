@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
-import Loading from '../Loading';
+import Loading from '../../components/Loading';
 
 class SurveyList extends Component {
   componentDidMount() {

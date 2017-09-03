@@ -1,0 +1,128 @@
+.rms-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 21px;
+  height: 21px;
+  margin-bottom: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.rms-icon + .rms-icon {
+  margin-left: 5px;
+}
+.rms-icon--is-disabled {
+  cursor: default;
+}
+
+/* .rms-icon-edit {
+  background-image: url(../images/icon/edit.png);
+}
+.rms-icon-noteedit {
+  background-image: url(../images/icon/note-edit.png);
+}
+.rms-icon-del {
+  background-image: url(../images/icon/del.png);
+}
+.rms-icon-permissionsetting {
+  background-image: url(../images/icon/permissionsSetting.png);
+} */
+
+/* pagination */
+/* .rms-icon-pagefirst {
+  background-image: url(../images/icon/page-first.png);
+}
+.rms-icon-pagelast {
+  background-image: url(../images/icon/page-last.png);
+}
+.rms-icon-pagenext {
+  background-image: url(../images/icon/page-next.png);
+}
+.rms-icon-pageprev {
+  background-image: url(../images/icon/page-prev.png);
+} */
+
+.rms-icon-collapse,
+.rms-icon-expand {
+  height: 11px;
+  width: 11px;
+  margin-right: 10px;
+}
+/* .rms-icon-collapse {
+  background-image: url(../images/icon/group-collapse.png);
+}
+.rms-icon-expand {
+  background-image: url(../images/icon/group-expand.png);
+} */
+
+.rms-icon-button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: none;
+  line-height: 1;
+  outline: 0;
+  background-color: transparent;
+}
+.rms-icon-button + .rms-icon-button {
+  margin-left: 10px;
+}
+.rms-icon-button--is-disabled {
+  opacity: .65;
+}
+.rms-icon-button--is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  cursor: default;
+}
+
+.rms-icon__fa {
+  font-size: 22px;
+  color: #777;
+}
+.rms-icon__fa:hover {
+  color: #9B9B9B;
+}
+.rms-icon-button[disabled] .rms-icon__fa:hover {
+  color: #777;
+}
+
+.fa-toggle-on.rms-icon__fa,
+.rms-icon-button[disabled] .fa-toggle-on.rms-icon__fa:hover {
+  color: #B8E986;
+}
+.fa-toggle-off.rms-icon__fa,
+.rms-icon-button[disabled] .fa-toggle-off.rms-icon__fa:hover {
+  color: #A2A2A2;
+}
+.rms-icon-button[disabled] .fa-toggle-on.rms-icon__fa,
+.rms-icon-button[disabled] .fa-toggle-off.rms-icon__fa {
+  opacity: 1;
+}
+
+.rms-icon__fa--size-sm {
+  font-size: 12px;
+}
+.rms-icon__fa--size-16 {
+  font-size: 16px;
+}
+
+.rms-icon__fa--rotate-45 {
+  transform: rotate(45deg);
+}
+
+.rms-icon__label {
+  margin-left: 5px;
+}
+
+.rms-icon-delete {
+  color: #777;
+  font-size: 18px;
+}
+.rms-icon-delete:hover {
+  color: #9b9b9b;
+}
+.rms-icon-delete[disabled] {
+  opacity: 0.5;
+}

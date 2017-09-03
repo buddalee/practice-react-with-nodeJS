@@ -1,0 +1,611 @@
+body {
+  font-family: Noto Sans TC,sans-serif!important;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #333;
+  height: 100%;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus{
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+.navbar-default{
+  background-color: #fff;
+}
+
+
+.navbar-header{
+  height: 50px;
+}
+
+.company-logo{
+  display: inline-block;
+  max-height: 50px;
+  padding-left: 15px;
+}
+.navbar-collapse {
+  overflow: hidden;
+}
+.navbar-toggle{
+  height: 50px;
+  width: 50px;
+  border: none;
+  margin: 0px;
+  border-radius: 0px;
+  text-align: center;
+  font-size: 20px;
+  color: #888;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover, .navbar-toggle--active{
+  color: #fff;
+  background: #008BCD;
+}
+
+.navbar-nav{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar-collapse{
+  background: #008BCD;
+  border-top: 1px solid #ccc;
+}
+
+.navbar-collapse li{
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar-collapse li:last-child{
+  border-bottom: 1px solid #ccc;
+  border: 0;
+}
+.collapse.in {
+  background-color: #fff;
+}
+.dropdown-menu{
+  padding: 0;
+  min-width: 150px;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #4a4a4a;
+  background-color: #f2f2f2;
+}
+
+.navbar-default .navbar-nav > li > a,
+.dropdown-menu > li >a {
+  color: #999999;
+  cursor: pointer;
+}
+
+.dropdown-menu > li > a{
+  padding: 3px 15px;
+}
+
+.dropdown-menu li.divider{
+  margin: 0;
+}
+
+
+.container-fluid {
+  max-width: 1170px;
+}
+.main {
+  margin: 50px auto;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  background: rgba(0,0,0, 0.6);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, height .0s ease-in-out .3s, width .0s ease-in-out .3s;
+}
+
+.mask--show{
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.form{
+  padding: 15px 0px;
+}
+
+.form__title{
+  font-size: 16px;
+  color: #008bcd;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.form__label{
+  display: block;
+}
+
+.form__label--require::before{
+  content: '*';
+  color: #cb5e5e
+}
+
+.form__input{
+  padding: 6px 10px;
+  height: 30px;
+  border-radius: 2px;
+  color: #4a4a4a;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.form__file{
+  display: inline-block;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 14px;
+  border-radius: 4px;
+  border: 1px solid #9b9b9b;
+  color: #777;
+  cursor: pointer;
+}
+
+.form__file input[type="file"]{
+  display: none;
+}
+
+.form__select{
+  padding: 0px 10px;
+  height: 30px;
+  border-radius: 3px;
+  color: #4a4a4a;
+  border: 1px solid #9b9b9b;
+  width: 100%;
+}
+.fileupload {
+  display: inline-block;
+  position: relative;
+  width: 75px;
+  margin: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+.fileupload > button {
+  cursor: pointer;
+  outline: none;
+}
+.fileuplload__input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+.rmsPortal-modal .windowbox__body {
+  min-height: 240px;
+}
+
+.form__date{
+  padding: 6px 10px;
+  height: 30px;
+  border-radius: 3px;
+  color: #4a4a4a;
+  border: 1px solid #9b9b9b;
+  width: 100%;
+}
+.form__remind {
+  display: inline-block;
+  /*padding-top: 8px;
+  padding-left: 10px;*/
+  font-size: 12px;
+  font-weight: normal;
+  cursor: default;
+  color: #9b9b9b;
+}
+.form__remind--is-invalid {
+  color: #C75353;
+}
+/* textarea */
+.rmsPortal-formtextarea {
+  display: inline-block;
+  width: 100%;
+}
+
+.form__textarea{
+  padding: 6px 10px;
+  border-radius: 3px;
+  color: #4a4a4a;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100px;
+}
+textarea.form__textarea {
+  height: auto;
+  min-height: 200px;
+  padding: 5px 10px;
+  background-color: #FFF;
+}
+
+.form__message{
+  color: #9b9b9b;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.form__message--group{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__message--group li:before{
+  content: '*';
+  margin-right: 5px;
+}
+
+.form__input-group--inline .form__date{
+  display: inline-block;
+  margin-right: 5px;
+  width: auto;
+}
+
+.form__seach{
+  padding: 10px 0;
+}
+
+.search-form__button span{
+  font-size: 0px;
+}
+
+.search-form{
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 50px;
+}
+
+.button{
+  display: block;
+  border-radius: 5px;
+  background-color: #26abe3;
+  text-align: center;
+  padding: 0px;
+  width: 100%;
+  border: 0px;
+  color: #fff;
+  height: 30px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+}
+.rmsPortal-btn {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 75px;
+  height: 30px;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 9pt;
+  font-weight: 400;
+}
+.rmsPortal-btn + .rmsPortal-btn {
+  margin-left: 10px;
+}
+.rmsPortal-btn[disabled] {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.rmsPortal-btn:hover,
+.rmsPortal-btn:active {
+  background-color: #eee;
+}
+
+.button__default{
+  border: 1px solid#9b9b9b;
+  color: #777;
+  background-color: #fff;
+}
+
+.button:hover,
+.button:active,
+.button:visited,
+.button:focus{
+  color: #fff;
+}
+
+.job-announcement__apply-button {
+  font-weight: bold;
+}
+.job-announcement__apply-button:hover,
+.job-announcement__apply-button:active {
+  background-color: #1C89BF;
+}
+.job-announcement__apply-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #4a4a4a;
+  background-color: #f2f2f2;
+}
+
+.container-fluid.main {
+  min-height: calc(100vh - 145px);
+}
+ /* datepicker */
+.rmsPortal__datepicker{
+  /*display: inline-block;*/
+}
+.rmsPortal__datepicker .input-group {
+  width: 100%;  
+}
+
+.rmsPortal__datepicker.rmsPortal__datepicker--width-150 .input-group {
+  width: 150px;
+}
+
+.rmsPortal__datepicker .input-group .input-group-btn {
+  width: 22px;
+}
+.rmsPortal__datepicker .input-group .input-group-btn button {
+  padding: 0px 12px;
+  border-radius: 0;
+  border-left: none;
+}
+.input-group-btn > .btn:hover,
+.input-group-btn > .btn:focus,
+.input-group-btn > .btn:active {
+  background-color: #fff;
+}
+.rmsPortal__datepicker .input-group .input-group-btn .fa-calendar {
+  margin-top: -2px;
+}
+.rmsPortal__datepicker .input-group input {
+  padding: 4px 6px 3px 10px;
+  font-size: 12px;
+  height: 22px;
+  border-radius: 0!important;
+}
+
+/* react-select parasite */
+.Select.form__input {
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+.Select.form__input:focus {
+  border: none;
+  box-shadow: none;
+}
+.Select.form__input.is-focused:not(.is-open) > .Select-control {
+  border-color: #4A90E2;
+  box-shadow: 0 0 4px 0 rgba(73,144,225,.65);
+}
+.Select.form__input .Select-control {
+  display: block;
+  height: 30px;
+  border-radius: 3px;
+  border-color: #ccc;
+  overflow: inherit;
+}
+.Select.form__input .Select-clear-zone,
+.Select.form__input .Select-loading-zone,
+.Select.form__input .Select-arrow-zone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.Select.form__input .Select-clear-zone {
+  right: 20px;
+}
+.Select.form__input .Select-loading-zone {
+  right: 23px;
+}
+.Select.form__input .Select-clear-zone .Select-clear {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.Select.form__input .Select-loading-zone .Select-loading {
+  padding-top: 2px;
+}
+.Select.form__input .Select-clear-zone .Select-clear,
+.Select.form__input .Select-loading-zone .Select-loading,
+.Select.form__input .Select-arrow-zone .Select-arrow {
+  vertical-align: bottom;
+}
+.Select.form__input .Select-value {
+  padding: 6px 10px;
+}
+.Select.form__input .Select-placeholder,
+.Select.form__input:not(.Select--multi) > .Select-control .Select-value {
+  line-height: 30px;
+  color: #4a4a4a;
+}
+.Select.form__input .Select-input,
+.Select.form__input .Select-input > input {
+  height: auto;
+  line-height: 30px;
+}
+.Select.form__input .Select-input > input {
+  padding: 0;
+}
+.Select.form__input .Select-menu-outer {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  z-index: 5;
+}
+.Select.form__input .Select-arrow-zone .Select-arrow {
+  vertical-align: inherit;
+}
+@media (min-width: 768px) {
+  .form__label{
+    display: inline-block;
+    text-align: right;
+  }
+
+  .form__label--block{
+    display: block;
+    text-align: left;
+  }
+
+  .form__input{
+    width: 260px;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  .form__select{
+    display: inline-block;
+    width: 260px;
+    margin-left: 10px;
+  }
+  .form__date{
+    display: inline-block;
+    width: 260px;
+    margin-left: 10px;
+  }
+  .form__radio{
+    text-align: right;
+  }
+
+  .form__textarea--block{
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .form__search .form__input{
+    width: 100%;
+    margin-left: 0;
+  }
+  .form__search .form__select{
+    width: 100%;
+    margin-left: 0;
+  }
+  .form__search .form__date{
+    width: 100%;
+    margin-left: 0;
+  }
+  .form__search .form__textarea{
+    width: 100%;
+    margin-left: 0;
+  }
+  .search-form__button {
+    width: 100%;
+    margin-left: 0;
+  }
+  .job-announcement__apply-button {
+    width: auto;
+    padding: 0 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+  }
+
+}
+@media (max-width: 991px){
+  .search-form__button .search-form__icon {
+    font-size: 0px;
+  }
+  .search-form__button span {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px){
+  .container-fluid.main {
+    min-height: calc(100vh - 195px);
+  }
+  .form__title{
+    font-weight: normal;
+  }
+  .main {
+    margin-top: 100px;
+  }
+  .company-logo{
+    padding: 0px;
+  }
+  .navigation {
+    background-color: transparent;
+  }
+  .navbar-collapse li{
+    border-bottom: none;
+  }
+  .form__search{
+    padding: 10px 0px;
+  }
+
+  .form__search .form__title{
+    color: #fff;
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+
+  .form__search .form__input{
+    width: 200px;
+    margin-right: 10px;
+  }
+
+  .search-form{
+    text-align: center;
+    position: fixed;
+    left: 0;
+  }
+  .search-form .form-group, .search-form .search-form__button{
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0px;
+  }
+
+  .search-form__button {
+    font-size: 0px;
+    background-color: transparent;
+    vertical-align: middle;
+  }
+
+  .search-form__button .search-form__icon {
+    font-size: 20px;
+    color: #fff;
+  }
+  .job-announcement__apply-button {
+    width: auto;
+    padding: 0 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .form__search .form__input {
+    width: 250px;
+  }
+  .rmsPortal-modal .windowbox__dialog {
+    width: 100%;
+    max-width: 850px;
+  }
+
+  .rmsPortal-modal .windowbox__body {
+    padding: 30px;
+  }
+}

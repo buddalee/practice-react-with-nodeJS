@@ -1,0 +1,18 @@
+.dropdownMenu-lang.dropdown .dropdown-menu > li{
+  margin-left: 45px;
+}
+.dropdownMenu-lang.dropdown .dropdown-menu .dropdownMenu-lang-item{
+  padding: 10px 15px 10px 10px;
+  background-color: transparent!important;
+}
+.dropdownMenu-lang.dropdown > a{
+  text-align: left;
+}
+.dropdownMenu-lang.dropdown .dropdown-title {
+  margin-left: 0px;
+}
+@media (min-width: 992px) {
+  .dropdownMenu-lang.dropdown {
+    display: none;
+  }
+}
