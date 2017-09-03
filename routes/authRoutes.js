@@ -15,6 +15,7 @@ module.exports = app => {
     '/auth/facebook/callback',
     passport.authenticate('facebook'),
     (req, res) => {
+    console.log('req: ',  req);
       res.redirect('/surveys');
     }
   );

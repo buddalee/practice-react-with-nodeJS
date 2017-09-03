@@ -9,4 +9,6 @@ module.exports = {
   redirectDomain: process.env.REDIRECT_DOMAIN,
   facebookClientID: process.env.FACEBOOK_CLIENT_ID,
   facebookClientSecret: process.env.FACEBOOK_CLIENT_SECRECT,
+  imgurClientID: process.env.IMGUR_CLIENT_ID,
+  imgurClientSecret: process.env.IMGUR_CLIENT_SECRECT
 };
