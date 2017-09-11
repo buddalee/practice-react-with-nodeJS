@@ -4,10 +4,6 @@ import SurveyFormReview from './SurveyFormReview';
 import SurveyForm from './SurveyForm';
 
 class SurveyNew extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { new: true };
-  // }
   state = { showFormReview: false };
 
   renderContent() {

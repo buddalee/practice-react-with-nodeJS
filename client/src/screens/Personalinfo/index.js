@@ -1,40 +1,27 @@
 import React, { Component } from 'react';
-import UploadFile from  'src/components/UploadFile';
-import { updatePersonalAvatar } from '../../actions';
+import UploadFile from  'components/UploadFile';
+import { updatePersonalAvatar } from 'actions';
 import { connect } from 'react-redux';
-// import postImgur from '../../../utils/postImgur';
+// import postImgur from 'utils/postImgur';
+import testImgur from 'utils/testImgur';
+
 
 const acceptFileExtensions = ['jpg', 'jpeg', 'gif', 'png'];
 
 class Personalinfo extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       isUploading: false,
-      avatarSrc: '',
+      avatarSrc: props.avatarSrc,
     };
-    this.onPersonalImageUpload = this.onPersonalImageUpload.bind(this);
-  }
-  onPersonalImageUpload(link) {
-    let base64 = link.replace(/^data:image\/(png|jpg|jpeg);base64,/, "");
-    const xhttp = new XMLHttpRequest();
-    xhttp.open('POST','https://api.imgur.com/3/image',true)
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.setRequestHeader("Authorization", `Client-ID 3d4890153c2eea4`);
-    xhttp.send(JSON.stringify({'image': base64}));
-    xhttp.onreadystatechange = function(x) {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
-        const avatarSrc = JSON.parse(xhttp.responseText).data.link;
-        return avatarSrc;
-      }
-      return null;
-    }
   }
   handleAttachmentChange(file) {
     const props = this.props;
     const {
       onBanUpload,
-      // onPersonalImageUpload,
+      updatePersonalAvatar,
+      accountId,
     } = props;
     this.setState({ isUploading: true });
     if (!file.isSizeCorrect && !file.isTypeCorrect) {
@@ -48,13 +35,12 @@ class Personalinfo extends Component {
       return onBanUpload('uploadPersonalPictureFilesByFormat');
     }
     this.setState({ isUploading: false });
-    console.log('file: ', file);
-    // return onPersonalImageUpload(file);
-    // postImgur(file.link);
-    // return this.onPersonalImageUpload(file.link);    
+    this.props.updatePersonalAvatar({ avatar: file.link, accountId });
   }
   render() {
-    const { isUploading, avatarSrc } = this.state;
+    const { isUploading } = this.state;
+    const { avatarSrc } = this.props;
+    console.log('avatarSrc: ', avatarSrc);
     return (
       <div>
         <img
@@ -73,7 +59,14 @@ class Personalinfo extends Component {
     );
   }
 }
-
-export default connect(null, {
+function mapStateToProps(state) {
+  if (state.auth) {
+    return {
+      avatarSrc: state.auth.avatar,
+      accountId: state.auth._id,
+    };
+  }
+}
+export default connect(mapStateToProps, {
   updatePersonalAvatar,
 })(Personalinfo);

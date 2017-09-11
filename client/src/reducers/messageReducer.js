@@ -29,11 +29,11 @@ export default function(state = {
     });
   } else if (error) {
     return Object.assign({}, state, {
-      message: error.message,
+      message: payload.response.statusText,
       onConfirm: undefined,
       onCancel: undefined,
       onClose: undefined,
-      status: error.status,
+      status: payload.response.status,
       httpStatus: error.httpStatus,
     });
   }

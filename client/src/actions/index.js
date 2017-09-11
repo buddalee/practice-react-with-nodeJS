@@ -68,10 +68,9 @@ export function resetMessage() {
   };
 }
 
-export function updatePersonalAvatar(link) {
-  debugger;
+export function updatePersonalAvatar(data) {
   return {
     type: UPDATE_PERSONAL_AVATAR,
-    payload: axios.put('/api/updateUserInfo', link),
+    payload: axios.put('/api/updateUserInfo', data),
   };
 }

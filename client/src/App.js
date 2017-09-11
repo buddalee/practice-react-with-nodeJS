@@ -1,3 +1,4 @@
+import 'font-awesome/css/font-awesome.css';
 import './stylesheets/bootstrap/css/bootstrap.css'
 import './stylesheets/layout.css';
 import React, { Component } from 'react';
@@ -103,7 +104,7 @@ class App extends Component {
               <Route exact path="/surveys" component={Dashboard}/>
               <Route exact path="/articles" component={ArticlesList}/>            
               <Route path="/surveys/new" component={SurveyNew}/>
-              <Route path="/personalinfo" component={Personalinfo}/>              
+              <Route exact path="/personalinfo" component={Personalinfo}/>              
               {
                 (() => {
                   if (message.message) {
